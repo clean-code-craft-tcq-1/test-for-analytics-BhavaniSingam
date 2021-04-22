@@ -32,8 +32,6 @@ List the dependencies of the Analysis-functionality.
 4. For Whom notification should send (details of receiver if it is via email and also needed the medium which it needs to be sent)
 5. third party applications need to record trends
 
-(add more if needed)
-
 ### Mark the System Boundary
 
 What is included in the software unit-test? What is not? Fill this table.
@@ -63,8 +61,6 @@ Add to these tests:
 8. Write "No increasing trend in values " to the PDF when the csv doesnt contain any trends.
 9. Verify if new PDF is stored every week.
 10. Check if battery telemetrics is stored in proper format in CSV
-
-(add more)
 
 ### Recognize Fakes and Reality
 
