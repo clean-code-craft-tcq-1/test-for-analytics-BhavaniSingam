@@ -54,9 +54,15 @@ Write tests in the form of `<expected output or action>` from `<input>` / when `
 Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
-1. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-1. _enter a test
-1. _enter a test
+2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
+3. Write the number of times of breach to the PDF, when the csv file contains value that breaches either maximum or minimum values.
+4. Write "No breaches found" to the PDF when the csv doesnt contain any breaches
+5. Write "Session ended" when the session to the server ended abruptly
+6. Write "File Not Found" to the PDF when the csv file is not available in the server
+7. Check if the notification is sent after every new PDF generation.
+8. Write "No increasing trend in values " to the PDF when the csv doesnt contain any trends.
+9. Verify if new PDF is stored every week.
+10. Check if battery telemetrics is stored in proper format in CSV
 
 (add more)
 
@@ -70,8 +76,8 @@ Enter one part that's real and another part that's faked/mocked.
 |--------------------------|--------------|-----------------------------|---
 Read input from server     | csv file     | internal data-structure     | Fake the server store
 Validate input             | csv data     | valid / invalid             | None - it's a pure function
-Notify report availability | _enter input | _enter output               | _enter fake or mock
-Report inaccessible server | _enter input | _enter output               | _enter fake or mock
-Find minimum and maximum   | _enter input | _enter output               | _enter fake or mock
-Detect trend               | _enter input | _enter output               | _enter fake or mock
-Write to PDF               | _enter input | _enter output               | _enter fake or mock
+Notify report availability | PDF          | sent/unsent                 | fake notification
+Report inaccessible server | Access to server |Access denied              | fake the access to server
+Find minimum and maximum   | csv data     |   Values of min&max           | None - it's a pure function
+Detect trend               | csv data     | internal data-structure          | None - it's a pure function
+Write to PDF               | csv file |      pdf       | Fake the call to offshelf convertor
